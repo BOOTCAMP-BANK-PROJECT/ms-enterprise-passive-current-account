@@ -1,7 +1,8 @@
 package com.bootcamp.enterprise.passive.currentaccount.util.handler;
-import com.bootcamp.personal.passiveaccounts.util.Util;
-import com.bootcamp.personal.passiveaccounts.util.handler.exceptions.BadRequestException;
-import com.bootcamp.personal.passiveaccounts.util.handler.exceptions.NotFoundException;
+
+import com.bootcamp.enterprise.passive.currentaccount.util.Util;
+import com.bootcamp.enterprise.passive.currentaccount.util.handler.exceptions.BadRequestException;
+import com.bootcamp.enterprise.passive.currentaccount.util.handler.exceptions.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
