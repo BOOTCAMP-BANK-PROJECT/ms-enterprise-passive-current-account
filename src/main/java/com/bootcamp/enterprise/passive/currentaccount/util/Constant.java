@@ -10,4 +10,10 @@ public class Constant {
 
     public static final String CLIENT_TYPE_VIP = "VIP";
 
+    public static final String ENTERPRISE_ACCOUNT_TYPE_VIP = "ACCOUNT_PYME";
+
+    public static final String ENTERPRISE_CLIENT_TYPE_VIP = "CLIENT_PYME";
+
+
+
 }

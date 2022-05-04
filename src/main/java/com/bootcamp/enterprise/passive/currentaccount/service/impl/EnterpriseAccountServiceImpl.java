@@ -58,7 +58,7 @@ public class EnterpriseAccountServiceImpl implements EnterpriseAccountService {
                                         webClient
                                                 .getWebClient("entrando desde c>>" + enterpriseAccount.getIdCompany())
                                                 .get()
-                                                .uri("/client/personal/find/" + enterpriseAccount.getIdCompany())
+                                                .uri("/client/enterprise/find/" + enterpriseAccount.getIdCompany())
                                                 .retrieve()
                                                 .bodyToMono(EnterpriseClient.class)
                                                 .flatMap(c -> {
@@ -67,8 +67,8 @@ public class EnterpriseAccountServiceImpl implements EnterpriseAccountService {
                                                     enterpriseAccount.setInsertionDate(new Date());
                                                     enterpriseAccount.setRegistrationStatus((short) 1);
 
-                                                    if (at.getAbbreviation().equals(Constant.ACCOUNT_TYPE_VIP)) {
-                                                        if (c.getProfile().equals(Constant.CLIENT_TYPE_VIP)) {
+                                                    if (at.getAbbreviation().equals(Constant.ENTERPRISE_ACCOUNT_TYPE_VIP)) {
+                                                        if (c.getProfile().equals(Constant.ENTERPRISE_CLIENT_TYPE_VIP)) {
 
                                                             return webClient
                                                                     .getWebClient()
