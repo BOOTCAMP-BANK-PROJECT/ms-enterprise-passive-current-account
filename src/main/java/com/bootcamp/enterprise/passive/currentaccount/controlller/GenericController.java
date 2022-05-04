@@ -1,4 +1,4 @@
-package com.bootcamp.enterprise.passive.currentaccount;
+package com.bootcamp.enterprise.passive.currentaccount.controlller;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("enterprise/passive/current_account/test")
+@RequestMapping("personal/passive/current_account/test")
 @Tag(name = "CI/CD API Test", description = "CI/CD Test with Github Actions")
 @CrossOrigin( origins = {"*"})
 @RequiredArgsConstructor
@@ -23,7 +23,7 @@ public class GenericController {
         return Mono.just(
                 ResponseEntity.ok()
                         .contentType(MediaType.APPLICATION_JSON)
-                        .body(Flux.just("Hola, Generic Controller FROM EntPas current_account with Cors *"))
+                        .body(Flux.just("Hola, Generic Controller FROM PerPas current-account with Cors *"))
         );
     }
 
